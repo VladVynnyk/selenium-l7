@@ -59,7 +59,7 @@ class AsosTests(unittest.TestCase):
         day_option.click()
 
         birthmonth.click()
-        month_option = driver.find_element(By.XPATH, "//option[contains(@value, '1')]")
+        month_option = driver.find_element(By.XPATH, "//option[contains(text(), 'January')]")
         month_option.click()
 
         birth_year.click()
@@ -82,11 +82,11 @@ class AsosTests(unittest.TestCase):
         signin_link.click()
 
         email_input = driver.find_element(By.ID, "EmailAddress")
-        first_name_input = driver.find_element(By.ID, "Password")
+        password_input = driver.find_element(By.ID, "Password")
         signin_button = driver.find_element(By.ID, "signin")
 
         email_input.send_keys("random@gmail.com")
-        first_name_input.send_keys("name")
+        password_input.send_keys("pass")
         signin_button.click()
 
 
